@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text: white;
+    --background: white;
+}
+
+body {
+    margin: 1px;
+    background-image: url(https://i.pinimg.com/564x/47/6c/0b/476c0b401012ea57c0fb793b396598db.jpg);
+    background-attachment: fixed;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+main {
+    background: url(https://i.pinimg.com/564x/b5/6e/b6/b56eb6f5026caa11060548947978595f.jpg) !important;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.frost {
+    background: rgba(255, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
