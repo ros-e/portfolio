@@ -130,10 +130,29 @@ main {
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    user-select: none;
 }
 
 .icon {
     height: 18px;
     width: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.link-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(0.75);
+    transition: filter 0.2s ease;
+}
+
+a:hover .link-icon {
     filter: brightness(0) invert(1);
 }

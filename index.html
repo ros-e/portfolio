@@ -32,10 +32,37 @@
                 16yo developer from Atlanta GA, building FullStack web apps and
                 studying Defensive Cybersecurity.
             </p>
-            <div class="separator" />
+            <div style="display: flex; flex-direction: row; gap: 20px">
+                <a href="https://github.com/ros-e">
+                    <img
+                        src="./public/github.svg"
+                        alt="GitHub"
+                        class="link-icon"
+                    />
+                </a>
+                <a href="https://x.com/rowsofpercs">
+                    <img src="./public/x.svg" alt="X" class="link-icon" />
+                </a>
+                <a href="mailto:rosetta@firemail.de">
+                    <img
+                        src="./public/email.svg"
+                        alt="Email"
+                        class="link-icon"
+                    />
+                </a>
+                <a href="https://www.last.fm/user/paw2k">
+                    <img
+                        src="./public/fm.svg"
+                        alt="Last.fm"
+                        class="link-icon"
+                    />
+                </a>
+            </div>
+            <div class="separator"></div>
+
             <div
                 style="
-                    margin-top: 20px;
+                    margin-top: 0px;
                     display: flex;
                     flex-direction: column;
                     gap: 15px;
@@ -43,51 +70,13 @@
                     font-size: 12px;
                 "
             >
-                <!--i need to make a map or something for this-->
                 <p>Skills</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 3px">
-                    <div class="badge">
-                        <img src="./public/pg.svg" class="icon" />
-                        PostgresQL
-                    </div>
-                    <div class="badge">
-                        <img src="./public/ts.svg" class="icon" />
-                        TypeScript
-                    </div>
-                    <div class="badge">
-                        <img src="./public/go.svg" class="icon" />
-                        Go
-                    </div>
-                    <div class="badge">
-                        <img src="./public/rust.svg" class="icon" />
-                        Rust
-                    </div>
-                    <div class="badge">
-                        <img src="./public/linux.svg" class="icon" />
-                        Linux
-                    </div>
-                    <div class="badge">
-                        <img src="./public/bs.svg" class="icon" />
-                        Burp Suite
-                    </div>
-                    <div class="badge">
-                        <img src="./public/drizzle.svg" class="icon" />
-                        Drizzle
-                    </div>
-                    <div class="badge">
-                        <img src="./public/prisma.svg" class="icon" />
-                        Prisma
-                    </div>
-                    <div class="badge">
-                        <img src="./public/next.svg" class="icon" />
-                        Next
-                    </div>
-                    <div class="badge">
-                        <img src="./public/react.svg" class="icon" />
-                        React
-                    </div>
-                </div>
-                <div class="separator" style="margin-top: 20px" />
+                <div
+                    style="display: flex; flex-wrap: wrap; gap: 3px"
+                    id="skillsContainer"
+                ></div>
+
+                <!--<div class="separator" style="margin-top: 20px"></div>
                 <div
                     style="
                         margin-top: 20px;
@@ -99,8 +88,31 @@
                     "
                 >
                     <p>Projects</p>
-                </div>
+                </div>-->
             </div>
         </div>
+        <!--thx claude <3-->
+        <script>
+            const skills = [
+                { name: "PostgreSQL", icon: "./public/pg.svg" },
+                { name: "TypeScript", icon: "./public/ts.svg" },
+                { name: "Go", icon: "./public/go.svg" },
+                { name: "Rust", icon: "./public/rust.svg" },
+                { name: "Linux", icon: "./public/linux.svg" },
+                { name: "Burp Suite", icon: "./public/bs.svg" },
+                { name: "Drizzle", icon: "./public/drizzle.svg" },
+                { name: "Prisma", icon: "./public/prisma.svg" },
+                { name: "Next", icon: "./public/next.svg" },
+                { name: "React", icon: "./public/react.svg" },
+            ];
+
+            const skillsContainer = document.getElementById("skillsContainer");
+            skills.forEach((skill) => {
+                const badge = document.createElement("div");
+                badge.className = "badge";
+                badge.innerHTML = `<img src="${skill.icon}" class="icon" alt="${skill.name}" /> ${skill.name}`;
+                skillsContainer.appendChild(badge);
+            });
+        </script>
     </body>
 </html>
