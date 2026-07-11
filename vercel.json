@@ -1,4 +1,5 @@
 {
   "version": 2,
-  "routes": [{ "src": "^/(?!.*\\.)(.*)$", "dest": "/index.html" }]
+  "buildCommand": "echo 'Static site'",
+  "outputDirectory": "public"
 }
